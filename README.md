@@ -12,7 +12,7 @@ Follow these step by step
 - git clone git@github.com:trongdth/git-comments.git
 - cd git-comments
 - pip3 install virualenv
-- virualenv .venv
+- virtualenv .venv
 - source .venv/bin/activate
 - pip3 install -r requirements.txt
 - mv config.default.yaml config.yaml
