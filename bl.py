@@ -24,7 +24,7 @@ def all_pull_requests(user_token, user_id, repos, created_at):
                'Accept': 'application/vnd.github+json',
                'X-GitHub-Api-Version': '2022-11-28'}
     response = requests.get(
-        "https://api.github.com/repos/{}/pulls".format(repos), headers=headers)
+        "https://api.github.com/repos/{}/pulls?state=all".format(repos), headers=headers)
     if response.status_code != 200:
         raise Exception(
             "Sorry, cannot get pull request for repos {}".format(repos))
