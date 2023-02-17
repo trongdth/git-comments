@@ -33,7 +33,7 @@ def all_pull_requests(user_token, user_id, repos, created_at):
 
     for dict in list:
         if dict['user']['login'] == user_id and datetime.strptime(dict['created_at'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=pytz.utc) >= created_at:
-            pr = PullRequest(dict['url'], dict['id'],
+            pr = PullRequest(dict['url'], dict['html_url'], dict['id'],
                              dict['user']['login'], dict['created_at'])
             prs.append(pr)
     return prs
