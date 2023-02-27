@@ -61,7 +61,7 @@ def all_comments(user_token, pull_request):
 
     list = json.loads(response.text)
     for dict in list:
-        if dict['user']['login'] != pull_request.login:
+        if dict['user']['login'] != pull_request.login and dict['state'] in ["CHANGES_REQUESTED", "COMMENT"]:
             comment = Comment(dict['id'], url=dict['html_url'],
                               reviewer=dict['user']['login'])
             comments.append(comment)
