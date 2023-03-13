@@ -11,7 +11,7 @@ Follow these step by step
 - register a personal access token (https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - git clone git@github.com:trongdth/git-comments.git
 - cd git-comments
-- pip3 install virualenv
+- pip3 install virtualenv
 - virtualenv .venv
 - source .venv/bin/activate
 - pip3 install -r requirements.txt
